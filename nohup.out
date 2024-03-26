@@ -1,0 +1,18 @@
+2023-12-16 23:34:57,709:INFO - parameters: Namespace(batch_size=20, checkpoint_path='/data/zj/SBIR/DLI-Net-main/results/checkpoint/2023-12-16_23:34:57.709624', cross_interaction=True, epoch=100, feature_type='mid', k=0.5, logger_path='/data/zj/SBIR/DLI-Net-main/results/log/2023-12-16_23:34:57.709624.log', lr=0.0001, margin=0.1, norm_type='2norm', ph_test_root='/data/zj/SBIR/DLI-Net-main/ShoeV2/testB', ph_test_txt='/data/zj/SBIR/DLI-Net-main/ShoeV2/photo_test.txt', ph_train_root='/data/zj/SBIR/DLI-Net-main/ShoeV2/trainB', ph_train_txt='/data/zj/SBIR/DLI-Net-main/ShoeV2/photo_train.txt', result_dir='/data/zj/SBIR/DLI-Net-main/results', self_interaction=True, sk_test_root='/data/zj/SBIR/DLI-Net-main/ShoeV2/testA', sk_test_txt='/data/zj/SBIR/DLI-Net-main/ShoeV2/sketch_test.txt', sk_train_root='/data/zj/SBIR/DLI-Net-main/ShoeV2/trainA')
+2023-12-16 23:34:57,710:INFO - loading model
+2023-12-16 23:35:02,444:INFO - loading data
+Epoch-1 training:   0%|          | 0/90 [00:00<?, ?it/s]Epoch-1 training:   0%|          | 0/90 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "train_v2.py", line 129, in <module>
+    train()
+  File "train_v2.py", line 86, in train
+    optimizer.step()
+  File "/data/zj/env/SBIR/DLI-net/lib/python3.8/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/data/zj/env/SBIR/DLI-net/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/zj/env/SBIR/DLI-net/lib/python3.8/site-packages/torch/optim/adam.py", line 133, in step
+    F.adam(params_with_grad,
+  File "/data/zj/env/SBIR/DLI-net/lib/python3.8/site-packages/torch/optim/_functional.py", line 87, in adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt
